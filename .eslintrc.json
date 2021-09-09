@@ -17,6 +17,11 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "settings": {
+    "react": {
+      "version": "detected"
+    }
+  },
   "plugins": ["react"],
   "rules": {}
 }
