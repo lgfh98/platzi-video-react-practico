@@ -1,0 +1,23 @@
+.input {
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid white;
+  font-family: var(--font-family);
+  margin-bottom: 20px;
+  padding: 0 0;
+  height: 40px;
+  font-size: 16px;
+  color: white;
+  outline: none;
+  &::placeholder {
+    color: white;
+  }
+
+  &--login {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+}

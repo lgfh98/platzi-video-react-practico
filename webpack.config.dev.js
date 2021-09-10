@@ -14,6 +14,8 @@ module.exports = {
       "@components": path.resolve(__dirname, "src/components"),
       "@styles": path.resolve(__dirname, "src/scss"),
       "@assets": path.resolve(__dirname, "src/assets"),
+      "@routes": path.resolve(__dirname, "src/routes"),
+      "@hooks": path.resolve(__dirname, "src/hooks"),
     },
   },
   module: {
@@ -47,5 +49,6 @@ module.exports = {
     },
     compress: true,
     port: 3001,
+    historyApiFallback: true,
   },
 };

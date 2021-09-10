@@ -4,11 +4,11 @@ import { Header } from "@components/Header";
 import { Search } from "@components/Search";
 import { Carousel } from "@components/Carousel";
 import { Footer } from "@components/Footer";
-import { useInitialState } from "./hooks/useInitialState";
+import { useInitialState } from "@hooks/useInitialState";
 
 const API = "http://localhost:3000/initalState";
 
-const App = () => {
+const Home = () => {
   const initialState = useInitialState(API);
 
   return (
@@ -28,4 +28,4 @@ const App = () => {
   );
 };
 
-export { App };
+export { Home };
