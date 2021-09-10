@@ -1,7 +1,17 @@
+@mixin media-movil() {
+  @media only screen and (max-width: 576px) {
+    @content;
+  }
+}
+
 .c_header {
   height: 80px;
   display: flex;
   justify-content: space-between;
+  @include media-movil() {
+    flex-direction: column;
+    align-items: center;
+  }
 
   &__logo {
     width: 200px;
