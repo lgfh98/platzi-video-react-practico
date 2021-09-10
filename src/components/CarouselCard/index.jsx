@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./style.scss";
 
 const CarouselCard = (props) => {
@@ -25,6 +26,14 @@ const CarouselCard = (props) => {
       </div>
     </div>
   );
+};
+
+CarouselCard.propTypes = {
+  title: PropTypes.string,
+  contentRating: PropTypes.string,
+  duration: PropTypes.number,
+  year: PropTypes.number,
+  cover: PropTypes.string,
 };
 
 export { CarouselCard };
