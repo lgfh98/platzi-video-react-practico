@@ -8,9 +8,11 @@ import { Footer } from "@components/Footer";
 const App = () => {
   const [videos, setVideos] = useState([]);
   const fetchVideos = async (url) => {
-    const response = await fetch(url);
-    const data = await response.json();
-    setVideos(data);
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      setVideos(data);
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -22,9 +24,12 @@ const App = () => {
       <Header />
       <Search />
 
-      <Carousel title="Estrenos nuevos" />
-      <Carousel title="Series" />
-      <Carousel title="Animes" />
+      {videos.mylist?.length > 0 && (
+        <Carousel title="Mi lista" videos={videos.mylist} />
+      )}
+
+      <Carousel title="Tendencias" videos={videos.trends} />
+      <Carousel title="Originales" videos={videos.originals} />
 
       <Footer />
     </>
