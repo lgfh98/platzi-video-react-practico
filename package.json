@@ -8,7 +8,8 @@
     "build": "webpack --config webpack.config.js",
     "start": "webpack serve --config webpack.config.dev.js",
     "lint": "eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "json-server": "json-server --watch initialState.json"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.4",
+    "@babel/plugin-transform-runtime": "^7.15.0",
     "@babel/preset-env": "^7.15.4",
     "@babel/preset-react": "^7.14.5",
     "babel-loader": "^8.2.2",
@@ -35,6 +37,7 @@
     "eslint-plugin-react": "^7.25.1",
     "html-webpack-plugin": "^5.3.2",
     "husky": "^7.0.2",
+    "json-server": "^0.16.3",
     "lint-staged": "^11.1.2",
     "mini-css-extract-plugin": "^2.2.2",
     "sass": "^1.39.0",
