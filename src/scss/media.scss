@@ -1,0 +1,23 @@
+// Esto no funciona usandolo en otro lado 😭😢,
+// Solo funciona usandolo en el mismo archivo que se esta llamando con
+// @include
+// @mixin media-desktop-m() {
+//   @media only screen and (max-width: 1200px) {
+//     @content;
+//   }
+// }
+// @mixin media-desktop-s() {
+//   @media only screen and (max-width: 992px) {
+//     @content;
+//   }
+// }
+// @mixin media-tablet() {
+//   @media only screen and (max-width: 768px) {
+//     @content;
+//   }
+// }
+// @mixin media-movil() {
+//   @media only screen and (max-width: 576px) {
+//     @content;
+//   }
+// }

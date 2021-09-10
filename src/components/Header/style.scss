@@ -1,0 +1,58 @@
+.c_header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo {
+    width: 200px;
+    align-self: center;
+    margin-left: 20px;
+  }
+  &__menu-container {
+    height: fit-content;
+    margin-top: 15px;
+    margin-right: 15px;
+    font-weight: bold;
+  }
+  &__profile-info-container {
+    display: flex;
+    color: var(--color-2);
+    width: 100px;
+    justify-content: space-between;
+  }
+  &__profile-logo {
+    width: 50px;
+    height: 50px;
+  }
+  &__link-container {
+    display: none;
+  }
+  &__link-list {
+    list-style: none;
+    padding: 0;
+    text-align: right;
+  }
+  &__link {
+    color: var(--color-2);
+    text-decoration: none;
+    font-size: 16px;
+  }
+  &__text {
+    font-size: 16px;
+  }
+
+  &--green {
+    background-color: var(--color-3);
+  }
+
+  &--purple {
+    background-color: var(--color-1);
+  }
+
+  &__menu-container:hover > &__link-container {
+    display: block;
+  }
+  &__link:hover {
+    border-bottom: 2px solid var(--color-2);
+  }
+}
