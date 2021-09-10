@@ -1,35 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "@styles/index.scss";
 import { Header } from "@components/Header";
 import { Search } from "@components/Search";
 import { Carousel } from "@components/Carousel";
 import { Footer } from "@components/Footer";
+import { useInitialState } from "./hooks/useInitialState";
+
+const API = "http://localhost:3000/initalState";
 
 const App = () => {
-  const [videos, setVideos] = useState([]);
-  const fetchVideos = async (url) => {
-    try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setVideos(data);
-    } catch (error) {}
-  };
-
-  useEffect(() => {
-    fetchVideos("http://localhost:3000/initalState");
-  }, [videos]);
+  const initialState = useInitialState(API);
 
   return (
     <>
       <Header />
       <Search />
 
-      {videos.mylist?.length > 0 && (
-        <Carousel title="Mi lista" videos={videos.mylist} />
+      {initialState.mylist?.length > 0 && (
+        <Carousel title="Mi lista" videos={initialState.mylist} />
       )}
 
-      <Carousel title="Tendencias" videos={videos.trends} />
-      <Carousel title="Originales" videos={videos.originals} />
+      <Carousel title="Tendencias" videos={initialState.trends} />
+      <Carousel title="Originales" videos={initialState.originals} />
 
       <Footer />
     </>
