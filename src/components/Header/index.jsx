@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logoPlatziVideo from "@assets/logo-platzi-video.png";
 import useIcon from "@assets/user-icon.png";
 import "./style.scss";
 
 const Header = () => (
   <header className="c_header c_header--purple">
-    <img className="c_header__logo" src={logoPlatziVideo} alt="Logo" />
+    <Link to="/">
+      <img className="c_header__logo" src={logoPlatziVideo} alt="Logo" />
+    </Link>
+
     <section className="c_header__menu-container">
       <div className="c_header__profile-info-container">
         <img
@@ -23,9 +27,9 @@ const Header = () => (
             </a>
           </li>
           <li>
-            <a className="c_header__link" href="">
-              Cerrar sesión
-            </a>
+            <Link className="c_header__link" to="login">
+              Iniciar sesión
+            </Link>
           </li>
         </ul>
       </div>

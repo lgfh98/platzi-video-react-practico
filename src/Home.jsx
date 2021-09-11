@@ -1,9 +1,7 @@
 import React from "react";
 import "@styles/index.scss";
-import { Header } from "@components/Header";
 import { Search } from "@components/Search";
 import { Carousel } from "@components/Carousel";
-import { Footer } from "@components/Footer";
 import { useInitialState } from "@hooks/useInitialState";
 
 const API = "http://localhost:3000/initalState";
@@ -13,7 +11,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <Search />
 
       {initialState.mylist?.length > 0 && (
@@ -22,8 +19,6 @@ const Home = () => {
 
       <Carousel title="Tendencias" videos={initialState.trends} />
       <Carousel title="Originales" videos={initialState.originals} />
-
-      <Footer />
     </>
   );
 };

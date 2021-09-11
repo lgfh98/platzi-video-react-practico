@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import googleIcon from "@assets/google-icon.png";
 import twitterIcon from "@assets/twitter-icon.png";
 import "./style.scss";
@@ -48,9 +49,9 @@ const Login = () => (
 
       <div className="c_login__container-register-question">
         <span className="c_login__text">¿No tienes alguna cuenta?</span>
-        <a className="c_login__link" href="">
+        <Link to="/register" className="c_login__link">
           Regístrate
-        </a>
+        </Link>
       </div>
     </section>
   </section>
