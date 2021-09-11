@@ -3,6 +3,7 @@ import {
   DELETE_FAVORITE,
   LOGIN_REQUEST,
   LOGOUT_REQUEST,
+  REGISTER_REQUEST,
 } from "@actions/actionNames";
 
 const reducer = (state, action) => {
@@ -34,6 +35,12 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: {},
+      };
+
+    case REGISTER_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
       };
 
     default:

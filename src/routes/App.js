@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "../Home";
 import Login from "@components/Login";
-import { Register } from "@components/register";
+import Register from "@components/register";
 import { NotFound } from "@components/NotFound";
 import { Layout } from "@components/Layout";
 
