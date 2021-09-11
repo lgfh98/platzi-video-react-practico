@@ -21,12 +21,10 @@ const Home = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    mylist: state.mylist,
-    trends: state.trends,
-    originals: state.originals,
-  };
-};
+const mapStateToProps = (state) => ({
+  mylist: state.mylist,
+  trends: state.trends,
+  originals: state.originals,
+});
 
 export default connect(mapStateToProps, null)(Home);

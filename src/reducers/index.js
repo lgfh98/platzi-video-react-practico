@@ -1,4 +1,9 @@
-import { SET_FAVORITE, DELETE_FAVORITE } from "@actions/actionNames";
+import {
+  SET_FAVORITE,
+  DELETE_FAVORITE,
+  LOGIN_REQUEST,
+  LOGOUT_REQUEST,
+} from "@actions/actionNames";
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -17,6 +22,18 @@ const reducer = (state, action) => {
       return {
         ...state,
         mylist: state.mylist.filter((item) => item.id !== action.payload.id),
+      };
+
+    case LOGIN_REQUEST:
+      return {
+        ...state,
+        user: action.payload,
+      };
+
+    case LOGOUT_REQUEST:
+      return {
+        ...state,
+        user: {},
       };
 
     default:

@@ -18,6 +18,7 @@ module.exports = {
       "@hooks": path.resolve(__dirname, "src/hooks"),
       "@actions": path.resolve(__dirname, "src/actions"),
       "@reducers": path.resolve(__dirname, "src/reducers"),
+      "@utils": path.resolve(__dirname, "src/utils"),
     },
   },
   module: {
