@@ -1,0 +1,23 @@
+.c_error-page {
+  background: linear-gradient(var(--color-3), #ab88ff);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--color-2);
+  &__code {
+    animation-name: pulse;
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    margin: 0.2em 0;
+    font-size: 450%;
+  }
+  &__message {
+    font-size: 136%;
+    margin: 0.2em 0;
+  }
+}
