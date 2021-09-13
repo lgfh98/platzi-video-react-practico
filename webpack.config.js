@@ -11,6 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.[contenthash].js",
+    assetModuleFilename: "images/[hash]",
   },
   resolve: {
     extensions: [".js", ".jsx"],

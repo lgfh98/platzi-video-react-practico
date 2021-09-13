@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Home from "../Home";
 import Login from "@components/Login";
 import Register from "@components/register";
@@ -8,7 +8,7 @@ import { Layout } from "@components/Layout";
 import VideoPlayer from "@components/VideoPlayer";
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Layout>
       <Switch>
         <Route exact path="/" component={Home} />
@@ -18,7 +18,7 @@ const App = () => (
         <Route component={NotFound} />
       </Switch>
     </Layout>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export { App };

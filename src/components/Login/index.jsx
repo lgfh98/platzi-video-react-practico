@@ -28,7 +28,6 @@ const Login = (props) => {
   };
 
   changeHeaderColor("var(--color-3)");
-  // changeFooterColor("var(--color-3)");
 
   return (
     <section className="c_login">
