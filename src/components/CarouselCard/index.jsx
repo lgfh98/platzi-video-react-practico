@@ -17,6 +17,7 @@ const CarouselCard = (props) => {
     year,
     cover,
     id,
+    source,
     setFavorite,
     deleteFavorite,
   } = props;
@@ -29,6 +30,7 @@ const CarouselCard = (props) => {
       year,
       cover,
       id,
+      source,
     });
   };
   const handleDeleteFavorite = () => {

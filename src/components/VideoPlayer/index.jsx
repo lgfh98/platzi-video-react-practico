@@ -7,6 +7,7 @@ const VideoPlayer = (props) => {
   const { id } = props.match.params;
   const { videos } = props;
   const video = videos.find((item) => item.id === Number(id));
+  console.log(video);
 
   return video ? (
     <div className="Player">

@@ -4,6 +4,7 @@ import {
   LOGIN_REQUEST,
   LOGOUT_REQUEST,
   REGISTER_REQUEST,
+  SET_SEARCH_VALUE,
 } from "@actions/actionNames";
 
 const reducer = (state, action) => {
@@ -41,6 +42,16 @@ const reducer = (state, action) => {
       return {
         ...state,
         user: action.payload,
+      };
+
+    case SET_SEARCH_VALUE:
+      return {
+        ...state,
+        searchList: [...state.trends, ...state.originals].filter((video) => {
+          return video.title
+            .toLowerCase()
+            .includes(action.payload.toLowerCase());
+        }),
       };
 
     default:
