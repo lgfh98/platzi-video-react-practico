@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import googleIcon from "@assets/google-icon.png";
 import twitterIcon from "@assets/twitter-icon.png";
 import "./style.scss";
+import { changeHeaderColor } from "@utils/styleSetter";
 
 const Login = (props) => {
   const { loginRequest } = props;
@@ -25,6 +26,9 @@ const Login = (props) => {
     loginRequest(form);
     props.history.push("/");
   };
+
+  changeHeaderColor("var(--color-3)");
+  // changeFooterColor("var(--color-3)");
 
   return (
     <section className="c_login">

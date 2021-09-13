@@ -15,7 +15,7 @@ const Header = (props) => {
   };
 
   return (
-    <header className="c_header c_header--purple">
+    <header className="c_header">
       <Link to="/">
         <img className="c_header__logo" src={logoPlatziVideo} alt="Logo" />
       </Link>

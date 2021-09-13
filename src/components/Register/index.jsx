@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { registerRequest } from "@actions";
 import { Link } from "react-router-dom";
+import { changeHeaderColor } from "@utils/styleSetter";
 import "./style.scss";
 
 const Register = (props) => {
@@ -25,6 +26,8 @@ const Register = (props) => {
     registerRequest(form);
     props.history.push("/");
   };
+
+  changeHeaderColor("var(--color-3)");
 
   return (
     <section className="register">

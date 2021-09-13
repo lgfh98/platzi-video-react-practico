@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 import plusIcon from "@assets/plus-icon.png";
 import playIcon from "@assets/play-icon.png";
 import deleteIcon from "@assets/remove-icon.png";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const CarouselCard = (props) => {
@@ -40,7 +41,9 @@ const CarouselCard = (props) => {
     <div className="c_card">
       <img className="c_card__image" src={cover} alt="card image" />
       <div className="c_card__details">
-        <img className="c_card__option" src={playIcon} />
+        <Link to={`/player/${id}`}>
+          <img className="c_card__option" src={playIcon} />
+        </Link>
         {isMyList ? (
           <img
             className="c_card__option"
